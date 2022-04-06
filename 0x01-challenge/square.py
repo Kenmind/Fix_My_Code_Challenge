@@ -1,11 +1,10 @@
 #!/usr/bin/python3
+""" Square module """
+
 
 class square():
-    
-    width = 0
-    height = 0
+    """ Defines a square """
 
-    
     def __init__(self, width=0, height=0):
         """ Initializes square """
         self.width = width
@@ -46,6 +45,7 @@ class square():
 
     def __str__(self):
         return "{}/{}".format(self.width, self.height)
+
 
 if __name__ == "__main__":
 
