@@ -23,7 +23,9 @@ class square():
     @width.setter
     def width(self, value):
         """Sets width of the square """
-        if value < 1:
+        if type(value) != int:
+            raise TypeError("Width must be an integer")
+        elif value < 1:
             raise ValueError("Width must be greater than 0")
         else:
             self.__width = value
@@ -31,6 +33,8 @@ class square():
     @height.setter
     def height(self, value):
         """ Sets height of thesquare """
+        if type(value) != int:
+            raise TypeError("Height must be an integer")
         if value < 1:
             raise ValueError("Height must be greater than 0")
         else:
