@@ -6,9 +6,36 @@ class square():
     height = 0
 
     
-    def __init__(self, *args, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+    def __init__(self, width=0, height=0):
+        """ Initializes square """
+        self.width = width
+        self.height = height
+
+    @property
+    def width(self):
+        """ Width of the square """
+        return self.__width
+
+    @property
+    def height(self):
+        """ Height of square """
+        return self.__height
+
+    @width.setter
+    def width(self, value):
+        """Sets width of the square """
+        if value < 1:
+            raise ValueError("Width must be greater than 0")
+        else:
+            self.__width = value
+
+    @height.setter
+    def height(self, value):
+        """ Sets height of thesquare """
+        if value < 1:
+            raise ValueError("Height must be greater than 0")
+        else:
+            self.__height = value
 
     def area_of_my_square(self):
         """ Area of the square """
